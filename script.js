@@ -1,6 +1,3 @@
-// --- MOCK DATA (As requested) ---
-
-// 1. Mutual Funds Data (Structure, Risk, Factors included)
 const fundsData = [
     { 
         id: 101, 
@@ -39,10 +36,6 @@ const fundsData = [
         description: "Tracks the top 50 global companies." 
     }
 ];
-
-// --- RENDER FUNCTIONS ---
-
-// Function to load cards on Investor Dashboard
 function loadInvestorFunds() {
     const container = document.getElementById('fund-container');
     if (!container) return;
@@ -74,7 +67,6 @@ function loadInvestorFunds() {
     `).join('');
 }
 
-// Function to load table on Analyst Dashboard
 function loadAnalystTable() {
     const tableBody = document.getElementById('analyst-table-body');
     if (!tableBody) return;
@@ -92,17 +84,14 @@ function loadAnalystTable() {
     `).join('');
 }
 
-// Helper for Badge Colors
 function getBadgeColor(risk) {
     if (risk === 'High') return 'danger';
     if (risk === 'Medium') return 'warning';
     return 'success';
 }
 
-// --- CHART RENDERING (Chart.js) ---
 
 function renderCharts() {
-    // Investor Portfolio Chart
     const ctx1 = document.getElementById('investorChart');
     if (ctx1) {
         new Chart(ctx1, {
@@ -117,7 +106,6 @@ function renderCharts() {
         });
     }
 
-    // Analyst Market Trend Chart
     const ctx2 = document.getElementById('analystChart');
     if (ctx2) {
         new Chart(ctx2, {
@@ -135,7 +123,6 @@ function renderCharts() {
     }
 }
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadInvestorFunds();
     loadAnalystTable();
