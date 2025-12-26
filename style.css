@@ -1,11 +1,9 @@
-/* General Styles */
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #f4f7f6;
     color: #333;
 }
 
-/* Navbar */
 .navbar {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -14,7 +12,6 @@ body {
     color: #0056b3 !important; /* Corporate Blue */
 }
 
-/* Hero Section (Big Banner) */
 .hero {
     background: linear-gradient(135deg, #0056b3 0%, #002a5c 100%);
     color: white;
@@ -31,7 +28,6 @@ body {
     opacity: 0.1;
 }
 
-/* Cards */
 .card {
     border: none;
     border-radius: 10px;
@@ -44,7 +40,6 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Stats Section (Measure Points) */
 .stat-box {
     padding: 30px;
     text-align: center;
@@ -58,7 +53,6 @@ body {
     color: #0056b3;
 }
 
-/* Dashboard Specifics */
 .sidebar {
     min-height: 100vh;
     background: white;
