@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f4f7f6; display: flex; align-items: center; justify-content: center; height: 100vh; }
+        .checkout-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%; max-width: 500px; }
+    </style>
+</head>
+<body>
+    <div class="checkout-box">
+        <h3 class="text-center mb-4">Confirm Investment</h3>
+        <p class="text-center text-muted">You are purchasing units for Fund ID: <span id="fund-id" class="fw-bold">...</span></p>
+        
+        <form action="investor.html">
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Amount ($)</label>
+                <input type="number" class="form-control" placeholder="Minimum 500" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Source</label>
+                <select class="form-select">
+                    <option>Linked Bank Account (**** 1234)</option>
+                    <option>Wallet Balance</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success w-100 btn-lg">Pay & Confirm</button>
+            <a href="investor.html" class="btn btn-link w-100 text-center mt-2">Cancel</a>
+        </form>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('fund-id').innerText = params.get('id') || 'Generic Fund';
+    </script>
+</body>
+</html>
